@@ -1,0 +1,119 @@
+/* BEM Methodology CSS for Event API Plugin */
+
+/* Event Filter */
+
+body .event-filter,
+body .event-grid {
+    margin: 0 auto;
+    /* Center the content */
+    padding: 0 1rem;
+    /* Add some padding for smaller screens */
+    max-width: 100%;
+    /* Allow the content to take up the full width */
+}
+
+.event-filter {
+    margin-bottom: 1rem;
+}
+
+.event-filter__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.event-filter__select {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease;
+}
+
+.event-filter__select:focus {
+    border-color: #5a67d8;
+    outline: none;
+}
+
+.event-filter__button {
+    margin-top: 0.5rem;
+    width: 100%;
+    background-color: #5a67d8;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.event-filter__button:hover {
+    background-color: #4c51bf;
+}
+
+/* Event Grid */
+.event-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .event-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    body .event-grid {
+        max-width: 1200px;
+        /* You can adjust this width as needed */
+    }
+}
+
+/* Event Message */
+.event-message {
+    margin-top: 1rem;
+}
+
+.event-message--error {
+    color: #e53e3e;
+}
+
+/* Event Card */
+.event-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-card__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.event-card__description {
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.event-card__date,
+.event-card__location,
+.event-card__category {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
